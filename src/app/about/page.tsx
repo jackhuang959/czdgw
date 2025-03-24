@@ -65,25 +65,25 @@ const culture = [
 
 const team = [
   {
-    name: '张志远',
+    name: '11',
     position: '创始人&CEO',
     description: '拥有20年企业管理软件行业经验，曾任某知名ERP公司技术总监',
     image: '/team/ceo.svg'
   },
   {
-    name: '李明',
+    name: '22',
     position: '技术总监',
     description: '计算机博士，专注于AI和企业级软件架构设计，拥有多项技术专利',
     image: '/team/cto.svg'
   },
   {
-    name: '王晓华',
+    name: '33',
     position: '产品总监',
     description: '10年产品经理经验，深谙企业管理痛点，主导多个成功项目',
     image: '/team/product.svg'
   },
   {
-    name: '陈静',
+    name: '44',
     position: '市场总监',
     description: '15年B2B市场营销经验，擅长企业品牌建设和市场策略规划',
     image: '/team/marketing.svg'

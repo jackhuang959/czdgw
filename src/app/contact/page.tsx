@@ -124,7 +124,7 @@ export default function Contact() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
+            {contactInfo.map((info) => (
               <motion.div
                 key={info.title}
                 initial="initial"
@@ -267,32 +267,21 @@ export default function Contact() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {careers.map((career, index) => (
+            {careers.map((career) => (
               <motion.div
                 key={career.position}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <h3 className="text-xl font-semibold mb-4">{career.position}</h3>
                 <ul className="space-y-2">
-                  {career.requirements.map((req, i) => (
-                    <li key={i} className="flex items-center text-gray-600">
-                      <span className="mr-2">•</span>
-                      {req}
+                  {career.requirements.map((requirement, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>{requirement}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6">
-                  <a
-                    href={`mailto:hr@example.com?subject=应聘${career.position}`}
-                    className="text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    投递简历 →
-                  </a>
-                </div>
               </motion.div>
             ))}
           </div>
